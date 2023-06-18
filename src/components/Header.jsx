@@ -1,6 +1,6 @@
 //import React from 'react'
 import "../components/header.css"
-import Logo from '../components/Logo.png'
+import Logo from '../img/Logo.png'
 const Header = () => {
   return (
     <>  <div className="Tituloconten">

@@ -1,6 +1,6 @@
-import FaceLogo from '../components/faceLogo.png'
-import LinkLog from '../components/Link.png'
-import GitLogo from '../components/logoGitHub.png'
+import FaceLogo from '../img/faceLogo.png'
+import LinkLog from '../img/Link.png'
+import GitLogo from '../img/logoGitHub.png'
 import '../components/footer.css'
 const footer = () => {
     return (
