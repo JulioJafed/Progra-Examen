@@ -1,9 +1,9 @@
 import { useState } from 'react'
 import './App.css'
 import Header from "./components/Header"
-//import '@chatscope/chat-ui-kit-styles/dist/default/styles.min.css';
+import '@chatscope/chat-ui-kit-styles/dist/default/styles.min.css';
 import { MainContainer, ChatContainer, MessageList, Message, MessageInput, TypingIndicator } from '@chatscope/chat-ui-kit-react';
-
+import Footer from "./components/footer"
 
 const API_KEY = "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";
 // "Explain things like you would to a 10 year old learning how to code."
@@ -92,23 +92,24 @@ function App() {
   <>
    <Header/>
   <div className="App">
-      <div style={{ backgroundColor:"snow", height: "800px", width: "1150px"  }}>
-        <MainContainer>
-          <ChatContainer>       
-            <MessageList 
+      <div style={{ backgroundColor:"snow", height: "800px", width: "1250px"  }}>
+        <MainContainer className='contener'>
+          <ChatContainer className='ChatCon'>       
+            <MessageList  className='MenssageLi'
               scrollBehavior="smooth" 
-              typingIndicator={isTyping ? <TypingIndicator content="ChatGPT is typing" /> : null}
+              typingIndicator={isTyping ? <TypingIndicator content="Buscando..." /> : null}
             >
               {messages.map((message, i) => {
                 console.log(message)
-                return <Message key={i} model={message} />
+                return <Message  key={i} model={message} />
               })}
             </MessageList>
-            <MessageInput placeholder="Type message here" onSend={handleSend} />        
+            <MessageInput className='contenerRes' placeholder="Escribe tu solicitud " onSend={handleSend} />        
           </ChatContainer>
         </MainContainer>
       </div>
     </div>
+    <Footer/>
     </>
   )
 }

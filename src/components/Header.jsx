@@ -1,10 +1,13 @@
 //import React from 'react'
 import "../components/header.css"
+import Logo from '../components/Logo.png'
 const Header = () => {
   return (
-    <>
-        <p className="Titulo">Julio Cabrera </p>
-        
+    <>  <div className="Tituloconten">
+            <p className="Titul">Julio Cabrera </p>
+            <p className="Titul2">ChatGPT-Mod</p>
+        </div>
+        <img className="Logo" src={Logo} alt=" No fount"></img>
     </>
   )
 }
